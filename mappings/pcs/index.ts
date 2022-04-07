@@ -119,10 +119,7 @@ export function handleAskNew(event: AskNew): void {
     token.totalTrades = ZERO_BI;
     token.isTradable = true;
     token.marketplaceUrl =
-      "https://pancakeswap.finance/nfts/collections/" +
-      Address.fromHexString(event.params.collection.toHex()).toString() +
-      "/" +
-      event.params.tokenId.toString();
+      "https://pancakeswap.finance/nfts/collections/" + collection.id + "/" + event.params.tokenId.toString();
 
     token.save();
   }
